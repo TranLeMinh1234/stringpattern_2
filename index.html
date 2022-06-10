@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="./styles/default.min.css">
+</head>
+<body>
+	<div style="display: flex;">
+		<div style="border-right: 1px solid black;padding-right: 10px;height: 100%">
+			<div style="display: flex; column-gap: 20px">
+				<div>
+					<h3>Mẫu:</h3>
+					<div>
+						<input type="text" name="pattern">
+					</div>
+				</div>
+				<div>
+					<h3>Thuật toán áp dụng</h3>
+					<select class="algorithm-execute">
+						<option value="1">Knuth- Morris-Pratt Algorithm</option>
+						<option value="2">Naive Algorithm</option>
+						<option value="3">Boyler More Algorithm</option>
+						<option value="4">KarpRabin Algorithm</option>
+						<option value="5">Smith</option>
+						<option value="6">Horspool</option>
+						<option value="7">QuickSearch</option>
+						<option value="8">MorrisPatt</option>
+						<option value="9">SkipSearch</option>
+						<option value="10">NotSoNaive</option>
+						<option value="11">Raita</option>
+						<option value="12">TunedBoyerMoore</option>
+					</select>
+				</div>
+			</div>
+			<h3>Đoạn văn bản so khớp với mẫu:</h3>
+			<div>
+				<textarea name="all_text" style="width: 400px;height: 200px"></textarea>
+			</div>
+			<h3>Kết quả: </h3>
+			<div class="kq" style="width: 400px;">	
+
+			</div>
+		</div>
+		<div style="flex: 1;padding-left: 10px">
+			<h3>Ngôn ngữ lập trình:</h3>
+			<div style="font-size: 18px">javascript</div>
+			<h3 >Độ phức tạp:</h3>
+			<div class="complexity" style="font-size: 18px">O(n*m)</div>
+			<h3>Trình bày thuật toán:</h3>
+			<div>
+				<pre><code class="html theory" style="font-size: 16px"></code></pre>
+			</div>
+			<h3>Thực hiện thuật toán</h3>
+			<div>
+				<pre><code class="javascript doAlgorithm" style="font-size: 16px"></code></pre>
+			</div>
+		</div>
+	</div>
+	<img src="">
+</body>
+
+<script type="text/javascript" src="KMP.js"></script>
+<script type="text/javascript" src="naive.js"></script>
+<script type="text/javascript" src="bloyerMore.js"></script>
+<script type="text/javascript" src="KarpRabin.js"></script>
+<script type="text/javascript" src="Smith.js"></script>
+<script type="text/javascript" src="Horspool.js"></script>
+<script type="text/javascript" src="QuickSearch.js"></script>
+<script type="text/javascript" src="MorrisPatt.js"></script>
+<script type="text/javascript" src="SkipSearch.js"></script>
+<script type="text/javascript" src="NotNoNaive.js"></script>
+<script type="text/javascript" src="Raita.js"></script>
+<script type="text/javascript" src="TunedBoyerMoore.js"></script>
+<script type="text/javascript" src="algo.js"></script>
+<script src="./highlight.min.js"></script>
+<script type="text/javascript">
+function hlEle()
+{
+
+	document.querySelectorAll('pre code .html').forEach(ele =>{
+
+		hljs.highlightElement(ele);
+	})
+
+	document.querySelectorAll('.javascript').forEach(ele =>{
+		console.log(ele);
+		hljs.highlightElement(ele);
+	})
+}
+
+fillInformationAlgorithm();
+hlEle();
+</script>
+</html>
